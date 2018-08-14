@@ -3,23 +3,24 @@
 <div class="title text-center">
     <h1 >Available Sitting Requests:</h1>
 </div>
-
 <div class="container">
   <div class="row">
     <% @sittings.each do |sitting| %>
       <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do %>
           <div class="sitting-card" >
             <div class="owner" >
+              <%= sitting.owner.name %>
               <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "owner_avatar_image" %>
               <div class="owner_description" >
-                <p><%= owner_description %></p>
+                <p><%= sitting.owner.description %></p>
               </div>
             </div>
             <ul>
               <li>
                 <% sitting.owner.pets.each do |pet| %>
                   <div class="pet-image">
-                    <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "owner_avatar_image" %>
+                    <%= pet.name %>
+                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar_image" %>
                   </div>
                   <div class="pet-info">
                     <p><%= pet.info %></p>
@@ -27,13 +28,15 @@
                 <% end %> <!-- end pet detail loop -->
               </li>
             </ul>
-
+<!-- this is a comment so we can commit -->
             <!-- sitting period line under main card area -->
             <div class="card_footer_sitting_period">
               <div class="sitting_from">
+                <p>Start Date</p>
                 <p><%= sitting.start_date %><p>
               </div>
               <div class="sitting_to">
+                <p>End Date</p>
                 <p><%= sitting.end_date %><p>
               </div>
             </div>
