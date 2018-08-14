@@ -12,13 +12,14 @@ guy = User.create!(name:"Guy",user_name:"guy34",email:"guy@hotmail.fr",password:
 cyrille = User.create!(name:"Cyrille",user_name:"cycylafamille",email:"cyrille@hotmail.fr",password:"1234567",address:"1 Dizengoff",phone_number:"0581234746",description:"My mom used to say threat animals like animals , they are only animals after all")
 rabea = User.create!(name:"Rabea",user_name:"rab33",email:"rabea@hotmail.fr",password:"1234567",address:"27 Dizengoff",phone_number:"0581221298",description:"My mom used to say threat animals like well")
 arbi = User.create!(name:"Arbi",user_name:"arbi2",email:"arbi@hotmail.fr",password:"1234567",address:"241 Ben yehouda",phone_number:"0547687123",description:"I love animals, especially roasted with a pich of salt and pepper")
-#pets
+#pehttps://github.com/EliyaNetanel/airbnb_pet_sitting/comparets
 pets = Pet.create!(name:"Mimi",species:"Siamese",user:yohav,info:"chinese")
 pets = Pet.create!(name:"Popo",species:"St Bernard",user:billel,info:"not that much of a saint")
 pets = Pet.create!(name:"Mama",species:"bird",user:arbi,info:"shit everywhere")
 pets = Pet.create!(name:"Pipi",species:"white shark",user:guy,info:"love to hug you")
 pets = Pet.create!(name:"Momo",species:"rabbit",user:eliya,info:"really sexual animal")
 pets = Pet.create!(name:"Papa",species:"turtle",user:rabea,info:"funny animal")
+
 #sittings
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:cricri, owner:yohav)
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:cricri, owner:yohav)

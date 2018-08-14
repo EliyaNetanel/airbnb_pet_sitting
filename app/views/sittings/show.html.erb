@@ -1,2 +1,57 @@
-<h1>Sittings#show</h1>
-<p>Find me in app/views/sittings/show.html.erb</p>
+<div class="header">
+  <div class="show-name text-center">
+    <h1>Sitting info</h1>
+  </div>
+</div>
+
+<div class="sitting-information">
+  <div class="owner-and-pet">
+    <div class="owner">
+      <h4>Owner:</h4>
+      <div class="owner name">
+        <%= @owner.name %>
+      </div>
+      <div class="owner-image">
+        <%#= image_tag %>
+      </div>
+      <div class="owner-info">
+        <%= @owner.description %>
+      </div>
+    </div>
+    <% @pets.each do |pet| %>
+      <div class="pets">
+        <% if @pets.length == 1 %>
+          <h4>Pet</h4>
+        <% else %>
+          <h4>Pets</h4>
+        <% end %>
+        <div class="pet name">
+          <%= pet.name %>
+          <%= pet.species %>
+
+        </div>
+        <div class="pet-image"></div>
+        <div class="pet-info">
+          <%= pet.info %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <div class="sitting-description text-center">
+    <div class="specific-sitting-description">
+      <% if @sitting.description != nil %>
+        <h4>Sitting description</h4>
+        <%= @sitting.description %>
+      <% end %>
+    </div>
+    <div class="sitting-date">
+      <h4>Date:</h4>
+      <%= @sitting.start_date %> - <%= @sitting.end_date %>
+    </div>
+  </div>
+  <div class="apply-to-sitting">
+    <div class="btn btn-success">
+      Apply for sitting
+    </div>
+  </div>
+</div>
