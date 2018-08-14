@@ -22,5 +22,7 @@ pets = Pet.create!(name:"Papa",species:"turtle",user:rabea,info:"funny animal")
 
 #sittings
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:christophe, owner:yohav)
-sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:christophe, owner:yohav)
-sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:christophe, owner:yohav)
+sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18",rating:4, sitter:yohav, owner:eliya)
+sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18",rating:4, sitter:pinchas, owner:guy)
+sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18",rating:4, sitter:arbi, owner:pinchas)
+sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18",rating:4, sitter:billel, owner:christophe)
