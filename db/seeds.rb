@@ -8,8 +8,8 @@ billel = User.create!(name:"Hillel",user_name:"Billel02",email:"Billel02@hotmail
 cricri = User.create!(name:"Christophe",user_name:"cricritkt",email:"cricri@hotmail.fr",password:"123456",address:"132 Dizengoff",phone_number:"0581234498",description:"My mom used to say threat animals like well")
 
 #pets
-pets = Pet.create!(name:"Mimi",species:"Siamese",user:yohav)
-pets = Pet.create!(name:"Popo",species:"St Bernard",user:billel)
+pets = Pet.create!(name:"Mimi",species:"Siamese",user:yohav, info:"likes carrots")
+pets = Pet.create!(name:"Popo",species:"St Bernard",user:billel, info:"likes apples")
 
 #sittings
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:cricri, owner:yohav)
