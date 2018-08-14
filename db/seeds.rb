@@ -13,3 +13,6 @@ pets = Pet.create!(name:"Popo",species:"St Bernard",user:billel)
 
 #sittings
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:cricri, owner:yohav)
+sittings = Sitting.create!(start_date:"14/07/18",end_date:"15/07/18",rating:3, sitter:rabea, owner:eliya)
+sittings = Sitting.create!(start_date:"13/06/18",end_date:"15/06/18",rating:2, sitter:eliya, owner:rabea)
+sittings = Sitting.create!(start_date:"08/08/18",end_date:"12/06/18",rating:5, sitter:guy, owner:arbi)
