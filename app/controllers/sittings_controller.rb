@@ -3,7 +3,7 @@ class SittingsController < ApplicationController
     @sittings = Sitting.all
   end
 
-  def showS
+  def show
     @sitting = Sitting.find(params[:id])
     @owner = @sitting.owner
     @pets = @owner.pets
