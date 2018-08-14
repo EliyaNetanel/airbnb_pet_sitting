@@ -1,5 +1,3 @@
-<h1>Sittings#index</h1>
-<p>Find me in app/views/sittings/index.html.erb</p>
 <div class="title text-center">
     <h1 >Available Sitting Requests:</h1>
 </div>
@@ -7,33 +5,34 @@
   <div class="row">
     <% @sittings.each do |sitting| %>
       <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do %>
-          <div class="card" >
-            <div class="owner" >
-
-              <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
-              <div class="owner-name">
+        <div class="card" >
+          <div class="owner" >
+            <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
+            <div class="owner-name">
               <%= sitting.owner.name %>
-              </div>
-              <div class="owner_description" >
-                <p><%= sitting.owner.description %></p>
-              </div>
             </div>
-            <ul>
-              <li>
-                <% sitting.owner.pets.each do |pet| %>
-                  <div class="pet-image">
-                    <%= pet.name %>
-                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar" %>
-                  </div>
-                  <div class="pet-info">
-                    <p><%= pet.info %></p>
-                  </div>
-                <% end %> <!-- end pet detail loop -->
-              </li>
-            </ul>
+            <div class="owner-address" >
+              <%= sitting.owner.address %>
+            </div>
+          </div>
+          <ul>
+              <% sitting.owner.pets.each do |pet| %>
+            <li>
+                <div class="pet-image">
+                  <%= pet.name %>
+                  <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar" %>
+                </div>
+                <div class="pet-info">
+                  <p><%= pet.info %></p>
+                </div>
+              <% end %> <!-- end pet detail loop -->
+            </li>
+          </ul>
+ <!--        </div> -->
 <!-- this is a comment so we can commit -->
             <!-- sitting period line under main card area -->
-            <div class="card_footer_sitting_period">
+
+            <!-- <div class="card_footer_sitting_period">
               <div class="sitting_from">
                 <p>Start Date</p>
                 <p><%= sitting.start_date %><p>
@@ -42,7 +41,8 @@
                 <p>End Date</p>
                 <p><%= sitting.end_date %><p>
               </div>
-            </div>
+            </div> -->
+
           </div> <!-- end div card -->
       </div> <!-- end div sitting card grid. cols-xs12 col-sm-4 -->
       <% end %> <!-- end grid loop -->
