@@ -7,10 +7,13 @@
   <div class="row">
     <% @sittings.each do |sitting| %>
       <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do %>
-          <div class="sitting-card" >
+          <div class="card" >
             <div class="owner" >
+
+              <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
+              <div class="owner-name">
               <%= sitting.owner.name %>
-              <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "owner_avatar_image" %>
+              </div>
               <div class="owner_description" >
                 <p><%= sitting.owner.description %></p>
               </div>
@@ -20,7 +23,7 @@
                 <% sitting.owner.pets.each do |pet| %>
                   <div class="pet-image">
                     <%= pet.name %>
-                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar_image" %>
+                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar" %>
                   </div>
                   <div class="pet-info">
                     <p><%= pet.info %></p>
@@ -40,8 +43,7 @@
                 <p><%= sitting.end_date %><p>
               </div>
             </div>
-
-          </div> <!-- end div sitting card -->
+          </div> <!-- end div card -->
       </div> <!-- end div sitting card grid. cols-xs12 col-sm-4 -->
       <% end %> <!-- end grid loop -->
   </div>
