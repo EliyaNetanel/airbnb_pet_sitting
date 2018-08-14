@@ -5,6 +5,9 @@ body {
   display: flex;
   justify-content: space-around;
   align: center;
+  .owner {
+    width: 450px;
+  }
 }
 .sitting-description {
   margin-top: 50px;

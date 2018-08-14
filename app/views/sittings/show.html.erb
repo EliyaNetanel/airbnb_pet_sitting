@@ -8,15 +8,22 @@
   <div class="owner-and-pet">
     <div class="owner">
       <h4>Owner:</h4>
-      <div class="owner name">
-        <%= @owner.name %>
-      </div>
       <div class="owner-image">
         <%#= image_tag %>
       </div>
-      <div class="owner-info">
-        <%= @owner.description %>
+      <div class="owner-name">
+        <ul>
+          <li>name: <%= @owner.name %></li>
+          <li>user name: <%= @owner.user_name %></li>
+          <li>address: <%= @owner.address %></li>
+          <li>phone number: <%= @owner.phone_number %></li>
+          <li>email: <%= @owner.email %></li>
+          <li>description: <%= @owner.description %></li>
+        </ul>
       </div>
+     <!--  <div class="owner-info">
+        <%= @owner.description %>
+      </div> -->
     </div>
     <% @pets.each do |pet| %>
       <div class="pets">
@@ -25,14 +32,19 @@
         <% else %>
           <h4>Pets</h4>
         <% end %>
-        <div class="pet name">
-          <%= pet.name %>
-          <%= pet.species %>
-
+<!--         <div class="pet-name">
+          <%#= pet.name %>
         </div>
+        <div class="pet-species">
+          <%= pet.species %>
+        </div> -->
         <div class="pet-image"></div>
         <div class="pet-info">
-          <%= pet.info %>
+          <ul>
+          <li>name: <%= pet.name %></li>
+          <li>species: <%= pet.species %></li>
+          <li>info: <%= pet.info %></li>
+          <%#= pet.info %>
         </div>
       </div>
     <% end %>
