@@ -50,8 +50,13 @@
     </div>
   </div>
   <div class="apply-to-sitting">
-    <div class="btn btn-success">
-      Apply for sitting
-    </div>
+    <% if @sitting.sitter.nil? %>
+    <%= link_to "Apply for sitting", sitting_path(@sitting), method: :patch , class: "btn btn-primary" %>
+    <% else %>
+      <div class="btn btn-success">
+        Applied successfully
+      </div>
+    <% end %>
+      <!-- Apply for sitting -->
   </div>
 </div>
