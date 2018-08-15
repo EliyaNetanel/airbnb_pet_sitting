@@ -2,7 +2,47 @@
 .user_story_container {
   display: flex;
   justify-content: space-evenly;
+
+  background-color: #f4f190;
+
   background-color: white;
+
     height: 254px;
 
+}
+.icone {
+    position: absolute;
+    left: 0;
+    width: 25%;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    line-height: 2em;
+    vertical-align: middle;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+body {
+    overflow-x: hidden;
+    font-family: 'Roboto Slab','Helvetica Neue',Helvetica,Arial,sans-serif;
+}
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 40px;
+}
+
+
+section {
+    padding: 100px 0;
 }

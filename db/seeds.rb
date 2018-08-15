@@ -26,3 +26,4 @@ sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18",rating:4, si
 sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18",rating:4, sitter:pinchas, owner:guy)
 sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18",rating:4, sitter:arbi, owner:pinchas)
 sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18",rating:4, sitter:billel, owner:christophe)
+f
