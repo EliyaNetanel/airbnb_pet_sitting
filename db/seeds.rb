@@ -51,7 +51,7 @@ sittings = Sitting.create!(start_date:"23/3/18",end_date:"28/3/18", owner:ben)
 sittings = Sitting.create!(start_date:"05/05/18",end_date:"15/05/18", owner:ruben)
 sittings = Sitting.create!(start_date:"13/12/18",end_date:"15/12/18", owner:shiri)
 sittings = Sitting.create!(start_date:"20/01/18",end_date:"30/01/18", owner:rabea)
-sittings = Sitting.create!(start_date:"21/01/18",end_date:"27/01/18", owner:cyrille)
+sittings = Sitting.create!(start_date:"21/01/18",end_date:"28/01/18", owner:cyrille)
 
 # sitter:christophe
 # sitter:yohav
