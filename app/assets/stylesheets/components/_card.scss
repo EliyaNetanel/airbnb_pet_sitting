@@ -2,7 +2,6 @@
   width: 100%;
 }
 
-
 .card {
   color: black;
   position: relative;
@@ -12,12 +11,15 @@
   font-size: 12px;
   margin-top:50px;
   margin-right: 50px;
-  background-color: #D3D3D3;
+  background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card:hover {
-  background-color: #D8D8D8;
+  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+          box-shadow: inset 0px 0px 5px #c1c1c1;
+   outline: none;
 }
 
 .owner {
@@ -34,6 +36,7 @@
 
 .owner-address {
   margin-top: 25px;
+  padding: 20px;
 }
 .pet {
   position: absolute;
@@ -43,9 +46,6 @@
   border-left: 1px solid  #E8E8E8;
 }
 
-.plus-pets {
-//image of a plus
-}
 
 .sitting-period {
   position: absolute;
@@ -56,6 +56,7 @@
   left: 0px;
   font-weight: bolder;
 }
+
 .text-center {
   text-align: center;
 }
@@ -65,39 +66,7 @@
   width: 50%;
   padding: 5px;
 }
-// .owner-name{
-//   position: absolute;
-// }
-// .card-category {
-//   position: absolute;
-//   top: 10px;
-//   left: 10px;
-//   font-size: 15px;
-//   text-transform: uppercase;
-// }
-// .owner-address {
-//   position: absolute;
-//   bottom: 10px;
-//   left: 10px;
-// }
-// .card-description h2 {
-//   font-size: 24px;
-// }
-// .card-description p {
-//   font-size: 14px;
-//   opacity: 0.7;
-//   font-weight: lighter;
-// }
-// .card-link {
-//   position: absolute;
-//   top: 0;
-//   bottom: 0;
-//   right: 0;
-//   width: 100%;
-//   z-index: 2;
-//   background: black;
-//   opacity: 0;
-// }
-// .card-link:hover {
-//   opacity: 0.1;
-// }
+
+li {
+  padding: 15px;
+}

@@ -45,7 +45,6 @@ pets = Pet.create!(name:"Ruby",species:"dog",user:ben,info:"the best dog")
 
 
 
-#sittings
 
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18", owner:yohav)
 sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18", owner:eliya)

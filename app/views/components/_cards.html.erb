@@ -1,7 +1,7 @@
 <div class="container">
   <div class="row">
     <% @sittings.each do |sitting| %>
-      <div class="col-xs-12 col-sm-6"><%= link_to sitting_path(sitting) do  %>
+      <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do  %>
         <div class="card" >
           <div class="owner" >
             <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
@@ -10,7 +10,7 @@
             </div>
             <div class="owner-address text-center" >
               <%= sitting.owner.address.split(",").first %><br>
-              <strong><%= sitting.owner.address.capitalize.split(",").last %></strong>
+              <strong><%= sitting.owner.address.split(",").last.capitalize %></strong>
             </div>
           </div> <!-- end of owner. Left part of the card -->
           <div class="pet text-center">
