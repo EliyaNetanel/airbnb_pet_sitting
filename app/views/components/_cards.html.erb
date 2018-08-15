@@ -1,8 +1,8 @@
 <div class="container">
   <div class="row">
     <% @sittings.each do |sitting| %>
-      <div class="col-xs-12 col-sm-6"><!--<%= link_to sitting_path(sitting)  %>-->
-        <div class="card" >
+      <div class="col-xs-12 col-sm-6"><%= link_to sitting_path(sitting) do %>
+        <div class="card">
           <div class="owner" >
             <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
             <div class="owner-name text-center">
@@ -40,8 +40,9 @@
             </div><!--sitting-dates-->
           </div><!--sitting-period-->
         </div> <!-- end div card -->
-      </div><!--bootstrap grid-->
-    <% end %><!--end sitting loop-->
+        <%end %>
+       </div><!--bootstrap grid-->
+      <% end %><!--end sitting loop-->
   </div><!--row-->
 </div> <!-- container-->
 
