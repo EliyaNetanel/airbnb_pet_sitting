@@ -4,9 +4,6 @@ class PetsController < ApplicationController
     @pets = @user.pets.all
   end
 
-  def show
-  end
-
   def new
   end
 
