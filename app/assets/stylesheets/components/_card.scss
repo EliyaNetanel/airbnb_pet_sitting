@@ -4,29 +4,31 @@
 
 
 .card {
-  // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
-  // background-size: cover !important;
-  // background-position: center;
   color: black;
   position: relative;
-  border: 2px solid black;
   height: 320px;
   width: 400px;
   border-radius:5px;
   font-size: 12px;
   margin-top:50px;
   margin-right: 50px;
+  background-color: #D3D3D3;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.card:hover {
+  background-color: #D8D8D8;
 }
 
 .owner {
   position: absolute;
-  width: 200px;
-  height: 280px;
+  width: 50%;
+  height: 100%;
   left: 0px;
 
 }
 .owner-name {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid  #E8E8E8;
   padding: 10px;
 }
 
@@ -36,9 +38,9 @@
 .pet {
   position: absolute;
   right: 0px;
-  width: 200px;
-  height: 280px;
-  border-left: 1px solid black;
+  width: 50%;
+  height: 100%;
+  border-left: 1px solid  #E8E8E8;
 }
 
 .plus-pets {
@@ -47,10 +49,9 @@
 
 .sitting-period {
   position: absolute;
-  right: 10px;
   height: 30px;
   width: 400px;
-  border: 1px solid black;
+  border-top: 1px solid   #E8E8E8;
   bottom: 0px;
   left: 0px;
   font-weight: bolder;
@@ -60,12 +61,9 @@
 }
 
 .sitting-title,.sitting-dates {
-  display: inline-block;
-
-}
-.sitting-title {
-  border-right: 1px solid black;
-  width: 200px;
+  float: left;
+  width: 50%;
+  padding: 5px;
 }
 // .owner-name{
 //   position: absolute;
