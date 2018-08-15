@@ -21,9 +21,38 @@ pets = Pet.create!(name:"Momo",species:"rabbit",user:eliya,info:"really sexual a
 pets = Pet.create!(name:"Papa",species:"turtle",user:rabea,info:"funny animal")
 
 #sittings
-sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18",rating:4, sitter:christophe, owner:yohav)
-sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18",rating:4, sitter:yohav, owner:eliya)
-sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18",rating:4, sitter:pinchas, owner:guy)
-sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18",rating:4, sitter:arbi, owner:pinchas)
-sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18",rating:4, sitter:billel, owner:christophe)
-f
+seed-dont-fucking-touch-them
+sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18", owner:yohav)
+sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18", owner:eliya)
+sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18", owner:guy)
+sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18", owner:pinchas)
+sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18", owner:gal)
+sittings = Sitting.create!(start_date:"23/3/18",end_date:"28/3/18", owner:ben)
+sittings = Sitting.create!(start_date:"05/05/18",end_date:"15/05/18", owner:ruben)
+sittings = Sitting.create!(start_date:"13/12/18",end_date:"15/12/18", owner:shiri)
+sittings = Sitting.create!(start_date:"20/01/18",end_date:"30/01/18", owner:rabea)
+sittings = Sitting.create!(start_date:"21/01/18",end_date:"28/01/18", owner:cyrille)
+
+# sitter:christophe
+# sitter:yohav
+# sitter:pinchas
+# sitter:arbi
+# sitter:billel
+# sitter:ben
+# sitter:billel
+# sitter:billel
+# sitter:billel
+# sitter:billel
+
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+# ,rating:4
+
+
