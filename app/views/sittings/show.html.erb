@@ -6,11 +6,9 @@
 
 <div class="sitting-information">
   <div class="owner-and-pet">
-    <div class="owner">
+    <div class="show-owner">
       <h4>Owner:</h4>
-      <div class="owner-image">
-        <%#= image_tag %>
-      </div>
+      <div class="owner-image"><%#= image_tag %></div>
       <div class="owner-name">
         <ul>
           <li>name: <%= @owner.name %></li>
@@ -21,30 +19,20 @@
           <li>description: <%= @owner.description %></li>
         </ul>
       </div>
-     <!--  <div class="owner-info">
-        <%= @owner.description %>
-      </div> -->
     </div>
     <% @pets.each do |pet| %>
-      <div class="pets">
+      <div class="show-pets">
         <% if @pets.length == 1 %>
           <h4>Pet</h4>
         <% else %>
           <h4>Pets</h4>
         <% end %>
-<!--         <div class="pet-name">
-          <%#= pet.name %>
-        </div>
-        <div class="pet-species">
-          <%= pet.species %>
-        </div> -->
         <div class="pet-image"></div>
         <div class="pet-info">
           <ul>
           <li>name: <%= pet.name %></li>
           <li>species: <%= pet.species %></li>
           <li>info: <%= pet.info %></li>
-          <%#= pet.info %>
         </div>
       </div>
     <% end %>

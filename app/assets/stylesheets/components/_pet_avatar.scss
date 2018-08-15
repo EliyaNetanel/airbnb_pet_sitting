@@ -1,8 +1,8 @@
 
-.avatar_image {
+.pet_avatar {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 75px;
+  height: 75px;
   margin: 1em auto;
   background-size: cover;
   background-repeat: no-repeat;
@@ -10,6 +10,6 @@
   -webkit-border-radius: 99em;
   -moz-border-radius: 99em;
   border-radius: 99em;
-  border: 2px solid #ffd802;
+  border: 1px solid #ffd802;
   box-shadow: 0 3px 2px rgba(0, 0, 0, 0.3);
 }
