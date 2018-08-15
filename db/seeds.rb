@@ -19,7 +19,7 @@ shiri = User.create!(name:"Shiri",user_name:"shiri96",email:"shiri@gmail.com",pa
 jade = User.create!(name:"Jade",user_name:"jade23",email:"jade@gmail.com",password:"1234567",address:"7 hahistadrot, holon",phone_number:"0547644446",description:"I love animals")
 gal = User.create!(name:"gal",user_name:"gally",email:"gal@gmail.com",password:"1234567",address:"12 calanit, omer",phone_number:"0547644447",description:"I love animals")
 #pehttps://github.com/EliyaNetanel/airbnb_pet_sitting/comparets
-pets = Pet.create!(name:"Mimi",species:"Siamese",user:yohav,info:"chinese")
+pets = Pet.create!(name:"Mimi",species:"Siamese",user:yohav,info:"chinese", photo: "cat-2934720_1920.jpg")
 pets = Pet.create!(name:"Toto",species:"St Bernard",user:billel,info:"not that much of a saint")
 pets = Pet.create!(name:"Monty",species:"bird",user:arbi,info:"shit everywhere")
 pets = Pet.create!(name:"Lili",species:"white shark",user:guy,info:"love to hug you")

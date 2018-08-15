@@ -22,7 +22,7 @@
                     <%= pet.name %>
                   </div><!--pet-name-->
                   <div class="pet-image">
-                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar" %>
+                    <%= image_tag: pet.photo, :alt => "pet_photo" %>
                   </div><!-- pet-image-->
                 </li>
               <% end %> <!-- end pet detail loop -->
