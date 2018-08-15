@@ -15,9 +15,11 @@ class SittingsController < ApplicationController
   def create
   end
 
-  def edit
-  end
-
   def update
+    @sitting = Sitting.find(params[:id])
+    @sitting.sitter = current_user
+    @sitting.save
+    redirect_to @sitting
+    # @sitter = current_user
   end
 end
