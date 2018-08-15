@@ -14,25 +14,28 @@ class SittingsController < ApplicationController
 
   def show
     set_sitting
-    # @sitting = Sitting.find(params[:id])
     @owner = @sitting.owner
     @pets = @owner.pets
-    # @owner = @sitting.owner
   end
 
   def new
+    @sitting = Sitting.new
   end
 
   def create
+    @sitting = Sitting.create(sitting_params)
+    if @sitting.save
+      redirect_to @sitting, notice: 'sitting was added'
+    else
+      render :new
+    end
   end
 
   def update
     set_sitting
-    # @sitting = Sitting.find(params[:id])
     @sitting.sitter = current_user
     @sitting.save
     redirect_to @sitting
-    # @sitter = current_user
   end
   private
   def set_sitting
