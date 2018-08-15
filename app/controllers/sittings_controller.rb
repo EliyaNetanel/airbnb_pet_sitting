@@ -12,6 +12,7 @@ class SittingsController < ApplicationController
     @sittings = current_user.sittings_by_me
   end
 
+
   def show
     set_sitting
     @owner = @sitting.owner
