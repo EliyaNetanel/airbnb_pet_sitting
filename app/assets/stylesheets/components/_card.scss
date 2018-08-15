@@ -1,44 +1,26 @@
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .card {
   // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
   // background-size: cover !important;
   // background-position: center;
   color: black;
-  // position: relative;
+  position: relative;
   border: 2px solid black;
   height: 320px;
   width: 400px;
   border-radius:5px;
 
 }
-// .owner {
-//   position: absolute;
-//   right: 10px;
-//   border-radius: 50%;
-//   width: 655px;
-// }
+
+.owner {
+  position: absolute;
+  right: 10px;
+  border-radius: 50%;
+  width: 655px;
+}
+.pet {
+  position: absolute;
+}
 // .owner-name{
 //   position: absolute;
 // }
