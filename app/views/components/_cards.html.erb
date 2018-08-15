@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row">
+    <% @sittings.each do |sitting| %>
+      <div class="col-xs-12 col-sm-6"><!--<%= link_to sitting_path(sitting)  %>-->
+        <div class="card" >
+          <div class="owner" >
+            <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
+            <div class="owner-name text-center">
+              <%= sitting.owner.name %>
+            </div>
+            <div class="owner-address text-center" >
+              <%= sitting.owner.address.split(",").first %><br>
+              <em><%= sitting.owner.address.capitalize.split(",").last %></em>
+            </div>
+          </div> <!-- end of owner. Left part of the card -->
+
+          <div class="pet text-center">
+            <ul class="list-unstyled"><!--Pet infor. right part of the card -->
+              <% sitting.owner.pets.each do |pet| %>
+                <li>
+                  <div class="pet-name text-center">
+                    <%= pet.name %>
+                  </div><!--pet-name-->
+                  <div class="pet-image">
+                    <%= image_tag "avatar_pic.jpg", alt: "pet_avatar_picture", class: "pet_avatar" %>
+                  </div><!-- pet-image-->
+                </li>
+              <% end %> <!-- end pet detail loop -->
+            </ul>
+            <div class="plus-pets">
+              <!-- HERE WE PLACE FONT AWESOME PLUS -->
+            </div><!-- plus-pets-->
+          </div><!-- pet-->
+          <div class="sitting-period">
+            <div class="sitting-title text-center">
+              <p>Sitting Period</p>
+            </div><!--sitting-title-->
+            <div class="sitting-dates text-center">
+              <p><%= "#{sitting.start_date} - #{sitting.end_date}" %></p>
+            </div><!--sitting-dates-->
+          </div><!--sitting-period-->
+        </div> <!-- end div card -->
+      </div><!--bootstrap grid-->
+    <% end %><!--end sitting loop-->
+  </div><!--row-->
+</div> <!-- container-->
+

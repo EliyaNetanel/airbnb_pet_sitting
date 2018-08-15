@@ -1,3 +1,7 @@
+.container {
+  width: 100%;
+}
+
 
 .card {
   // text-shadow: 0 1px 3px rgba(0,0,0,0.6);
@@ -7,19 +11,61 @@
   position: relative;
   border: 2px solid black;
   height: 320px;
-  width: 400px;
+  width: 600px;
   border-radius:5px;
-
+  font-size: 12px;
+  margin-top:50px;
+  margin-right: 50px;
 }
 
 .owner {
   position: absolute;
-  right: 10px;
-  border-radius: 50%;
-  width: 655px;
+  width: 200px;
+  height: 280px;
+  left: 0px;
+
+}
+.owner-name {
+  border-bottom: 1px solid black;
+  padding: 10px;
+}
+
+.owner-address {
+  margin-top: 25px;
 }
 .pet {
   position: absolute;
+  right: 0px;
+  width: 200px;
+  height: 280px;
+  border-left: 1px solid black;
+}
+
+.plus-pets {
+//image of a plus
+}
+
+.sitting-period {
+  position: absolute;
+  right: 10px;
+  height: 30px;
+  width: 400px;
+  border: 1px solid black;
+  bottom: 0px;
+  left: 0px;
+  font-weight: bolder;
+}
+.text-center {
+  text-align: center;
+}
+
+.sitting-title,.sitting-dates {
+  display: inline-block;
+
+}
+.sitting-title {
+  border-right: 1px solid black;
+  width: 200px;
 }
 // .owner-name{
 //   position: absolute;
