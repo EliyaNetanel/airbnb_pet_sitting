@@ -60,45 +60,4 @@ sittings = Sitting.create!(start_date:"21/01/18",end_date:"27/01/18", owner:cyri
 
 
 
-# sitter:christophe
-
-# sitter:yohav
-
-# sitter:pinchas
-
-# sitter:arbi
-
-# sitter:billel
-
-# sitter:ben
-
-# sitter:billel
-
-# sitter:billel
-
-# sitter:billel
-
-# sitter:billel
-
-
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
-
-# ,rating:4
 
