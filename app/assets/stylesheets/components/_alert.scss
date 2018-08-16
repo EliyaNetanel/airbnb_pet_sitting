@@ -3,12 +3,17 @@
 * ------------------------------------- */
 
 .alert {
-  margin: 0;
+  margin: 0px;
   text-align: center;
   color: white;
+  padding: 9px;
+  position: absolute;
+  width: 100%;
+  top: 69px;
 }
+
 .alert-info {
-  background: $green;
+  background: #ffd802;
 }
 .alert-warning {
   background: $red;
