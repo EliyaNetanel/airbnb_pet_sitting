@@ -24,6 +24,7 @@ jade = User.create!(name:"Jade",user_name:"jade23",email:"jade@gmail.com",passwo
 gal = User.create!(name:"gal",user_name:"gally",email:"gal@gmail.com",password:"1234567",address:"12 calanit, omer",phone_number:"0547644447",description:"I love animals")
 
 #pehttps://github.com/EliyaNetanel/airbnb_pet_sitting/comparets
+
 pets = Pet.create!(name:"harry",species:"dog",user:pinchas,info:"Harry is a very calm dog. Except if you don't let him program in Ruby for at least 23 hours a day he will bark and pee on you when you are asleep. He is a very intelligent programmer and is currently working on a libary to replace Ruby On Rails.", photo: seed_photo('harry.jpg'))
 pets = Pet.create!(name:"Mimi",species:"dragon",user:yohav,info:"chinese", photo: seed_photo('dragon.png'))
 pets = Pet.create!(name:"Toto",species:"cat",user:billel,info:"not that much of a saint", photo: seed_photo('cat.jpg'))
@@ -45,6 +46,7 @@ pets = Pet.create!(name:"Baby",species:"scorpion",user:ruben,info:"she is a very
 pets = Pet.create!(name:"Coco",species:"shark",user:jade,info:"she is a very cheerfull bird", photo: seed_photo('shark.jpg'))
 pets = Pet.create!(name:"Mango",species:"snake",user:gal,info:"she is a very lovable bird", photo: seed_photo('snake.jpg'))
 pets = Pet.create!(name:"Ruby",species:"unicorn",user:ben,info:"the best dog", photo: seed_photo('unicorn.jpg'))
+
 
 
 

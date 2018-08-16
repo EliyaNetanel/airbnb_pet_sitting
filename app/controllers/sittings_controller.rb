@@ -34,9 +34,13 @@ class SittingsController < ApplicationController
 
   def update
     set_sitting
-    @sitting.sitter = current_user
-    @sitting.save
-    redirect_to @sitting
+    # if current_user.sitter?
+      @sitting.sitter = current_user
+      @sitting.save
+      redirect_to @sitting
+    # else
+      #render to edit the sitting details as owner
+    # end
   end
   private
   def set_sitting

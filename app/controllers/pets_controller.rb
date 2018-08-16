@@ -9,18 +9,20 @@ class PetsController < ApplicationController
 
   def new
     # @user = current_user
-    @pet = current_user.pets.new(pet_params)
+    @pet = Pet.new
   end
 
   def create
     # @user = current_user
-    @pet = current_user.pets.new(pet_params)
-    @pet.save
+    @pet = Pet.new(pet_params)
+    @pet.user = current_user
+
     if @pet.save
       redirect_to pets_path, notice: 'pet was added'
     else
       # ??????? where to render
-      render pets_path, :locals => { :pet => @pet }
+      # render to profile page
+      render :new#, :locals => { :pet => @pet }
     end
   end
 
@@ -42,7 +44,7 @@ class PetsController < ApplicationController
 
   private
   def set_pet
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:id])
   end
   def pet_params
     params.require(:pet).permit(:name, :species, :info, :photo)
