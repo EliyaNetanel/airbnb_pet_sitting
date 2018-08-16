@@ -1,7 +1,8 @@
 header.masthead {
     text-align: center;
     color: #fff;
-    background:  url("banner.jpg");
+    // background:  url("banner.jpg");
+    background:  asset-url("banner.jpg");
 
     background-repeat: no-repeat;
     background-attachment: scroll;
