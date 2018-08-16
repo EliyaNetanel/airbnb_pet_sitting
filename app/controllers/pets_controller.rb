@@ -9,17 +9,19 @@ class PetsController < ApplicationController
 
   def new
     # @user = current_user
-    @pet = current_user.pets.new(pet_params)
+    @pet = Pet.new
   end
 
   def create
     # @user = current_user
-    @pet = current_user.pets.new(pet_params)
-    @pet.save
+    @pet = Pet.new(pet_params)
+    @pet.user = current_user
+
     if @pet.save
       redirect_to pets_path, notice: 'pet was added'
     else
       # ??????? where to render
+      # render to profile page
       render pets_path, :locals => { :pet => @pet }
     end
   end
