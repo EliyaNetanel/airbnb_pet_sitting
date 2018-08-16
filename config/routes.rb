@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   devise_for :users
 
-  resources :pets, except: [:index, :show]
+  resources :pets, except: [:show]
   resources :sittings, except: [:destroy] do
     collection do
       get :my_sittings
