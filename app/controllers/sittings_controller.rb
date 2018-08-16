@@ -2,7 +2,7 @@ class SittingsController < ApplicationController
   # before_action :set_sitting
   def index
     if params[:query].present?
-      @sittings = Sitting.joins(:owner).where("address ILIKE ?", "%#{params[:query]}%" )
+      @sittings = Sitting.joins(:owner).where("address ILIKE ?", "%#{params[:query].capitalize}%" )
     else
       @sittings = Sitting.all
     end

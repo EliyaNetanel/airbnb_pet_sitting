@@ -4,6 +4,7 @@
   </div>
 </div>
 
+
 <div class="sitting-information">
   <div class="owner-and-pet">
     <div class="show-owner">
@@ -27,7 +28,9 @@
         <% else %>
           <h4>Pets</h4>
         <% end %>
-        <div class="pet-image"></div>
+        <div class="pet-image">
+           <%= image_tag pet.photo%>
+        </div>
         <div class="pet-info">
           <ul>
           <li>name: <%= pet.name %></li>
