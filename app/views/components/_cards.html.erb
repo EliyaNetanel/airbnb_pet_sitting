@@ -6,10 +6,12 @@
           <div class="owner" >
             <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
             <div class="owner-name text-center">
-              <%= sitting.owner.name %>
+              <%= sitting.owner.name.capitalize %>
             </div>
             <div class="owner-address text-center" >
-              <%= sitting.owner.address.split(",").first %><br>
+              <i class="fas fa-map-marker-alt"></i>
+            <br>
+              <%= sitting.owner.address.split(",").first.capitalize %><br>
               <strong><%= sitting.owner.address.split(",").last.capitalize %></strong>
             </div>
           </div> <!-- end of owner. Left part of the card -->
@@ -18,7 +20,7 @@
               <% sitting.owner.pets.each do |pet| %>
                 <li>
                   <div class="pet-name text-center">
-                    <%= pet.name %>
+                    <%= pet.name.capitalize %>
                   </div><!--pet-name-->
                   <div class="pet-image">
                     <%# image_tag pet.photo, :alt => "pet_photo" %>
@@ -30,14 +32,14 @@
               <!-- HERE WE PLACE FONT AWESOME PLUS -->
             </div><!-- plus-pets-->
           </div><!-- pet-->
-          <div class="sitting-period">
-            <div class="sitting-title text-center">
-              <p>Sitting Period</p>
-            </div><!--sitting-title-->
-            <div class="sitting-dates text-center">
-              <p><%= "#{sitting.start_date} - #{sitting.end_date}" %></p>
+          <div class="sitting-period text-center">
+            <!-- <div class="sitting-title text-center"> -->
+            <!-- </div>sitting-title -->
+            <!-- <div class="sitting-dates text-center"> -->
+              <i class="far fa-calendar-alt calender-icon"></i>
+              <%= "#{sitting.start_date} - #{sitting.end_date}" %>
             </div><!--sitting-dates-->
-          </div><!--sitting-period-->
+          <!-- </div>sitting-period -->
         </div> <!-- end div card -->
         <% end %>
       </div><!--bootstrap grid-->
