@@ -51,10 +51,10 @@ pets = Pet.create!(name:"Ruby",species:"unicorn",user:ben,info:"the best dog", p
 
 
 
+sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18", owner:pinchas)
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18", owner:yohav)
 sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18", owner:eliya)
 sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18", owner:guy)
-sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18", owner:pinchas)
 sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18", owner:gal)
 sittings = Sitting.create!(start_date:"23/3/18",end_date:"28/3/18", owner:ben)
 sittings = Sitting.create!(start_date:"05/05/18",end_date:"15/05/18", owner:ruben)
