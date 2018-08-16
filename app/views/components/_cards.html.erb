@@ -4,7 +4,7 @@
       <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do  %>
         <div class="card" >
           <div class="owner" >
-            <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
+            <%#= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
             <div class="owner-name text-center">
               <%= sitting.owner.name %>
             </div>
@@ -21,7 +21,8 @@
                     <%= pet.name %>
                   </div><!--pet-name-->
                   <div class="pet-image">
-                    <%# image_tag pet.photo, :alt => "pet_photo" %>
+                    <%= cl_image_tag pet.photo, height: 250, width: 250, crop: :fill %>
+
                   </div><!-- pet-image-->
                 </li>
               <% end %> <!-- end pet detail loop -->
