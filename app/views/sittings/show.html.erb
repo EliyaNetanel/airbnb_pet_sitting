@@ -4,7 +4,7 @@
   <ol class="carousel-indicators">
     <li data-target="#carousel" data-slide-to="0" class="active"></li>
     <li data-target="#carousel" data-slide-to="1"></li>
-    <li data-target="#carousel" data-slide-to="2"></li>
+    <!-- <li data-target="#carousel" data-slide-to="2"></li> -->
   </ol>
 
   <!-- Wrapper for slides -->
@@ -15,9 +15,9 @@
     <div class="item">
       <img src="/assets/cat1.jpg">
     </div>
-    <div class="item">
-      <img src="/assets/rat1.jpg">
-    </div>
+    <!-- <div class="item"> -->
+      <!-- <img src="/assets/rat1.jpg"> -->
+    <!-- </div> -->
   </div>
 
   <!-- Controls -->
@@ -42,7 +42,8 @@
     <div class="col-lg-8 mx-auto text-center">
       <h2 class="section-heading text-white">Owner</h2>
       <div>
-        <img src="/assets/avatar_pic-1a74c91d5af1ff7fae1b2dadc3a63d6c979209bda055ffaf8a838c702f3f59e2.jpg" class="avatar-large"/>
+        <img src="/assets/cross_eyed_woman.jpg" class="avatar-large"/>
+
       </div>
           <ul>
             <li>name: <%= @owner.name %></li>
@@ -58,14 +59,12 @@
   <div class="container">
   <div class="row">
     <div class="col-lg-8 mx-auto text-center">
+          <h4><strong>Pets</strong></h4>
     <% @pets.each do |pet| %>
-        <% if @pets.length == 1 %>
-          <h4>Pet</h4>
-        <% else %>
-          <h4>Pets</h4>
-        <% end %>
+
           <ul>
-          <li>name: <%= pet.name %></li>
+          <br>
+          <li><em>name: <%= pet.name %></em></li>
           <li>species: <%= pet.species %></li>
           <li>info: <%= pet.info %></li>
         </div>
@@ -82,7 +81,9 @@
       <% end %>
     </div>
     <div class="sitting-date">
-      <h4>Date:</h4>
+      <br>
+      <br>
+      <h4><strong>Date:</strong></h4>
       <%= @sitting.start_date %> - <%= @sitting.end_date %>
     </div>
   </div>
