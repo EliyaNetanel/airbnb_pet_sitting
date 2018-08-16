@@ -22,7 +22,7 @@ class PetsController < ApplicationController
     else
       # ??????? where to render
       # render to profile page
-      render pets_path, :locals => { :pet => @pet }
+      render :new#, :locals => { :pet => @pet }
     end
   end
 
@@ -44,7 +44,7 @@ class PetsController < ApplicationController
 
   private
   def set_pet
-    @pet = current_user.pets.find(params[:id])
+    @pet = Pet.find(params[:id])
   end
   def pet_params
     params.require(:pet).permit(:name, :species, :info, :photo)

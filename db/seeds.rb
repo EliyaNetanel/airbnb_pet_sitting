@@ -21,7 +21,7 @@ gal = User.create!(name:"gal",user_name:"gally",email:"gal@gmail.com",password:"
 
 #pehttps://github.com/EliyaNetanel/airbnb_pet_sitting/comparets
 
-pets = Pet.create!(name:"Mimi",species:"dragon",user:yohav,info:"chinese",  photo: File.open(File.join(Rails.root, "/app/assets/images/dragon-1597583_1280.png")))
+pets = Pet.create!(name:"Mimi",species:"dragon",user:yohav,info:"chinese")#  photo: File.open(File.join(Rails.root, "/app/assets/images/dragon-1597583_1280.png")))
 pets = Pet.create!(name:"Toto",species:"St Bernard",user:billel,info:"not that much of a saint")
 pets = Pet.create!(name:"Monty",species:"bird",user:arbi,info:"shit everywhere")
 pets = Pet.create!(name:"Lili",species:"white shark",user:guy,info:"love to hug you")
