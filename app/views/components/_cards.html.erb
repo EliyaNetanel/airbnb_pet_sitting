@@ -5,17 +5,17 @@
         <%= link_to sitting_path(sitting) do  %>
           <div class="card" >
             <div class="pet text-center">
-              <ul class="list-unstyled list-inline"><!--Pet infor. right part of the card -->
+              <ul class="list-unstyled list-inline list-center"><!--Pet infor. right part of the card -->
                 <% sitting.owner.pets.each do |pet| %>
                   <li>
                     <div class="pet-name text-center">
                       <%= pet.name %>
                     </div><!--pet-name-->
-                    <div class="pet-image">
+                    <div class="pet-image text-center">
                       <% if sitting.owner.pets.count ==1 %>
-                        <%= cl_image_tag pet.photo, height: 190, width: 190, crop: :fill, :class => "image-class" %>
-                      <% elsif sitting.owner.pets.count ==2 %>
                         <%= cl_image_tag pet.photo, height: 150, width: 150, crop: :fill, :class => "image-class" %>
+                      <% elsif sitting.owner.pets.count ==2 %>
+                        <%= cl_image_tag pet.photo, height: 130, width: 130, crop: :fill, :class => "image-class" %>
                       <% end %>
                     </div><!-- pet-image-->
                   </li>
@@ -25,8 +25,8 @@
             <div class="owner" >
               <div class="owner-address text-center" >
                 <i class="fas fa-map-marker-alt"></i><br>
-                <%= sitting.owner.address.split(",").first %><br>
-                <strong><%= sitting.owner.address.split(",").last.capitalize %></strong>
+                <%= sitting.owner.address.split(",").first.titlecase %><br>
+                <strong><%= sitting.owner.address.split(",").last.titlecase %></strong>
               </div>
             </div> <!-- end of owner. Left part of the card -->
             <div class="sitting-period text-center">

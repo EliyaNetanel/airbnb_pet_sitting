@@ -1,149 +1,50 @@
-
 .container {
-  width: 100%;
+ width: 100%;
 }
-
-
 .card {
-  color: black;
-  position: relative;
-  height: 350px;
-  width: 350px;
-  border-radius:5px;
-  font-size: 16px;
-  margin-top:50px;
-  margin-right: 50px;
-  background-color: white;
-  text-decoration: none;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  &:hover {
-    text-decoration: none;
-  }
-}
-
-.pet-name {
-  text-decoration: none;
-  margin-top: 10px;
-
-}
+ color: black;
+ position: relative;
+ height: 350px;
+ width: 350px;
+ border-radius:5px;
+ font-size: 16px;
+ margin-top:50px;
+ margin-right: 50px;
+ background-color: white;
+ text-decoration: none;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ &:hover {
+   text-decoration: none;
+ }
+}.pet-name {
+ text-decoration: none;
+ margin-top: 10px;}
 .image-class {
-  border-radius: 8px;
+ border-radius: 8px;
 }
 .card:hover {
-  -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-     -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-          box-shadow: inset 0px 0px 5px #c1c1c1;
-   outline: none;
-   text-decoration: none;
-}
-.sitting-period {
+ -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
+    -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
+         box-shadow: inset 0px 0px 5px #c1c1c1;
+  outline: none;
   text-decoration: none;
-  margin-top: 10px;
 }
-
-
-.owner-address {
-  margin-top: 25px;
-  padding: 20px;
-}
-
-// .container {
-//   width: 100%;
-// }
-
-// .owner-address {
-//   // margin-top: 5px;
-//   padding: 20px;
-// }
-.pet {
-  position: absolute;
-  right: 0px;
-  width: 50%;
-  height: 100%;
-  border-left: 1px solid  #E8E8E8;
-}
-
-// .card {
-//   color: black;
-//   position: relative;
-//   height: 320px;
-//   width: 400px;
-//   border-radius:5px;
-//   font-size: 12px;
-//   margin-top:50px;
-//   margin-right: 50px;
-//   background-color: white;
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-// }
-
-
-// .card:hover {
-//   -webkit-box-shadow: inset 0px 0px 5px #c1c1c1;
-//      -moz-box-shadow: inset 0px 0px 5px #c1c1c1;
-//           box-shadow: inset 0px 0px 5px #c1c1c1;
-//    outline: none;
-// }
-
 .sitting-period {
-  position: absolute;
-  height: 35px;
-  width: 400px;
-  border-top: 1px solid   #E8E8E8;
-  bottom: 0px;
-  left: 0px;
-  font-weight: bolder;
-  padding-top: 5px;
+ text-decoration: none;
+ margin-top: 5px;
+}.owner-address {
+ margin-top: 10px;
+ padding: 10px;
 }
 .calender-icon {
-  padding-right: 5px;
+ padding-right: 5px;
 }
 
-
-// .owner {
-//   position: absolute;
-//   width: 50%;
-//   height: 100%;
-//   left: 0px;
-
-// }
-// .owner-name {
-//   border-bottom: 1px solid  #E8E8E8;
-//   padding: 10px;
-
-
-// .owner-address {
-//   margin-top: 25px;
-//   padding: 20px;
-// }
-// .pet {
-//   position: absolute;
-//   right: 0px;
-//   width: 50%;
-//   height: 100%;
-//   border-left: 1px solid  #E8E8E8;
-// }
-
-
-// .sitting-period {
-//   position: absolute;
-//   height: 30px;
-//   width: 400px;
-//   border-top: 1px solid   #E8E8E8;
-//   bottom: 0px;
-//   left: 0px;
-//   font-weight: bolder;
-// }
-
-// .text-center {
-//   text-align: center;
-// }
-
-// .sitting-title,.sitting-dates {
-//   float: left;
-//   width: 50%;
-//   padding: 5px;
-// }
-
-// li {
-//   padding: 15px;
-// }
+.pet {
+  display: flex;
+  justify-content: center;
+}
+.list-center {
+    display: flex;
+  justify-content: center;
+}
