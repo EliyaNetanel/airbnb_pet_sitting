@@ -64,7 +64,8 @@ pets = Pet.create!(name:"bunti",species:"horse",user:ruben,info:"Bunti is a lap 
 
 pets = Pet.create!(name:"Oliver",species:"trump",user:shiri,info:"Interacts well with other animals. Especially pussy cats. Just be careful when he sees them as he tends to be a bit grabby", photo: seed_photo('trump.jpg'))
 
-pets = Pet.create!(name:"Snooze",species:"killer-whale",user:eliya,info:"Exellent if you like swimming long distances at depth. Less good as a walking companion. Tends to eat a fair bt and i quite vocal when he surfaces", photo: seed_photo('killer-whale.jpg'))
+pets = Pet.create!(name:"Snooze",species:"cat",user:eliya,info:"Excellent if you like swimming long distances at depth. Less good as a walking companion. Tends to eat a fair bt and i quite vocal when he surfaces", photo: seed_photo('killer-whale.jpg'))
+# pets = Pet.create!(name:"Nick",species:"rat",user:eliya,info:"very small, dont lose him!", photo: seed_photo('killer-whale.jpg'))
 
 pets = Pet.create!(name:"Lucy",species:"kitten",user:guy,info:"Awwwwwwwwwwwwwwwwwww.", photo: seed_photo('kitten.jpg'))
 
