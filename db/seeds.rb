@@ -1,3 +1,7 @@
+def seed_photo(photo)
+  File.open(File.join(Rails.root, "/app/assets/images/#{photo}"))
+end
+
 User.destroy_all
 Pet.destroy_all
 Sitting.destroy_all
@@ -21,36 +25,36 @@ gal = User.create!(name:"gal",user_name:"gally",email:"gal@gmail.com",password:"
 
 #pehttps://github.com/EliyaNetanel/airbnb_pet_sitting/comparets
 
-pets = Pet.create!(name:"Mimi",species:"dragon",user:yohav,info:"chinese", photo: "cat-2934720_1920.jpg")
-pets = Pet.create!(name:"Toto",species:"St Bernard",user:billel,info:"not that much of a saint")
-pets = Pet.create!(name:"Monty",species:"bird",user:arbi,info:"shit everywhere")
-pets = Pet.create!(name:"Lili",species:"white shark",user:guy,info:"love to hug you")
-pets = Pet.create!(name:"Momo",species:"rabbit",user:eliya,info:"really loving animal")
-pets = Pet.create!(name:"Papi",species:"turtle",user:rabea,info:"funny animal")
-pets = Pet.create!(name:"bunti",species:"dog",user:ruben,info:"he loves to get petted")
-pets = Pet.create!(name:"harry",species:"dog",user:pinchas,info:"really loving animal")
-pets = Pet.create!(name:"Snooze",species:"dog",user:eliya,info:"the best dog, a bit territorial")
-pets = Pet.create!(name:"Lucy",species:"cat",user:guy,info:"she is very lovable")
-pets = Pet.create!(name:"Bailey",species:"rabbit",user:cyrille,info:"best rabbit in the world")
-pets = Pet.create!(name:"Molly",species:"cat",user:jake,info:"she really has a problem with birds")
-pets = Pet.create!(name:"Oliver",species:"cat",user:jake,info:"great cat")
-pets = Pet.create!(name:"Lily",species:"fish",user:jade,info:"very quiet")
-pets = Pet.create!(name:"Chloe",species:"dog",user:shiri,info:"she is a very small dog")
-pets = Pet.create!(name:"Baby",species:"bird",user:ruben,info:"she is a very small bird")
-pets = Pet.create!(name:"Coco",species:"bird",user:jade,info:"she is a very cheerfull bird")
-pets = Pet.create!(name:"Mango",species:"bird",user:gal,info:"she is a very lovable bird")
-pets = Pet.create!(name:"Buddy",species:"bird",user:pinchas,info:"he is a very quiet bird")
-pets = Pet.create!(name:"Oliver",species:"cat",user:shiri,info:"he is a very nice cat")
-pets = Pet.create!(name:"Ruby",species:"dog",user:ben,info:"the best dog")
+pets = Pet.create!(name:"harry",species:"dog",user:pinchas,info:"Harry is a very calm dog. Except if you don't let him program in Ruby for at least 23 hours a day he will bark and pee on you when you are asleep. He is a very intelligent programmer and is currently working on a libary to replace Ruby On Rails.", photo: seed_photo('harry.jpg'))
+pets = Pet.create!(name:"Mimi",species:"dragon",user:yohav,info:"chinese", photo: seed_photo('dragon.png'))
+pets = Pet.create!(name:"Toto",species:"cat",user:billel,info:"not that much of a saint", photo: seed_photo('cat.jpg'))
+pets = Pet.create!(name:"Monty",species:"dog",user:arbi,info:"shit everywhere", photo: seed_photo('dachshund.jpg'))
+pets = Pet.create!(name:"Buddy",species:"chuck-norris",user:pinchas,info:"he is a very quiet bird", photo: seed_photo('chucknorris.jpg'))
+pets = Pet.create!(name:"Lili",species:"dinosaur",user:guy,info:"love to hug you", photo: seed_photo('dinosaur.jpg'))
+pets = Pet.create!(name:"Momo",species:"dog",user:eliya,info:"really loving animal", photo: seed_photo('dog.jpg'))
+pets = Pet.create!(name:"Papi",species:"gollum",user:rabea,info:"funny animal", photo: seed_photo('gollum.jpg'))
+pets = Pet.create!(name:"bunti",species:"horse",user:ruben,info:"he loves to get petted", photo: seed_photo('horse.jpg'))
+pets = Pet.create!(name:"Oliver",species:"trump",user:shiri,info:"he is a very nice cat", photo: seed_photo('trump.jpg'))
+pets = Pet.create!(name:"Snooze",species:"killer-whale",user:eliya,info:"the best dog, a bit territorial", photo: seed_photo('killer-whale.jpg'))
+pets = Pet.create!(name:"Lucy",species:"kitten",user:guy,info:"she is very lovable", photo: seed_photo('kitten.jpg'))
+pets = Pet.create!(name:"Bailey",species:"lama",user:cyrille,info:"best rabbit in the world", photo: seed_photo('lama.jpg'))
+pets = Pet.create!(name:"Molly",species:"lemur",user:jake,info:"she really has a problem with birds", photo: seed_photo('lemur.jpg'))
+pets = Pet.create!(name:"Oliver",species:"lion-club",user:jake,info:"great cat", photo: seed_photo('lion-cub.jpg'))
+pets = Pet.create!(name:"Lily",species:"polar-bear",user:jade,info:"very quiet", photo: seed_photo('polar-bear.jpg'))
+pets = Pet.create!(name:"Chloe",species:"pug",user:shiri,info:"she is a very small dog", photo: seed_photo('pug.jpg'))
+pets = Pet.create!(name:"Baby",species:"scorpion",user:ruben,info:"she is a very small bird", photo: seed_photo('scorpion.jpg'))
+pets = Pet.create!(name:"Coco",species:"shark",user:jade,info:"she is a very cheerfull bird", photo: seed_photo('shark.jpg'))
+pets = Pet.create!(name:"Mango",species:"snake",user:gal,info:"she is a very lovable bird", photo: seed_photo('snake.jpg'))
+pets = Pet.create!(name:"Ruby",species:"unicorn",user:ben,info:"the best dog", photo: seed_photo('unicorn.jpg'))
 
 
 
-#sittings
 
+
+sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18", owner:pinchas)
 sittings = Sitting.create!(start_date:"12/05/18",end_date:"15/05/18", owner:yohav)
 sittings = Sitting.create!(start_date:"1/03/18",end_date:"15/03/18", owner:eliya)
 sittings = Sitting.create!(start_date:"12/08/18",end_date:"15/08/18", owner:guy)
-sittings = Sitting.create!(start_date:"12/12/18",end_date:"15/12/18", owner:pinchas)
 sittings = Sitting.create!(start_date:"12/01/18",end_date:"15/01/18", owner:gal)
 sittings = Sitting.create!(start_date:"23/3/18",end_date:"28/3/18", owner:ben)
 sittings = Sitting.create!(start_date:"05/05/18",end_date:"15/05/18", owner:ruben)

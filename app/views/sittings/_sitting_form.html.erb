@@ -1,0 +1,17 @@
+
+<%= simple_form_for(@sitting) do |f| %>
+<% if @sitting.errors.any? %>
+    <div class="errors-container">
+      <ul>
+        <% @sitting.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :description %>
+    <%= f.submit %>
+<% end %>

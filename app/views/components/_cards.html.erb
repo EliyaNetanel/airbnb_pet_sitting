@@ -1,47 +1,41 @@
 <div class="container">
   <div class="row">
     <% @sittings.each do |sitting| %>
-      <div class="col-xs-12 col-sm-4"><%= link_to sitting_path(sitting) do  %>
-        <div class="card" >
-          <div class="owner" >
-            <%= image_tag "avatar_pic.jpg", alt: "owner_avatar_picture", class: "avatar_image" %>
-            <div class="owner-name text-center">
-              <%= sitting.owner.name %>
-            </div>
-            <div class="owner-address text-center" >
-              <%= sitting.owner.address.split(",").first.titlecase %><br>
-              <strong><%= sitting.owner.address.split(",").last.titlecase %></strong>
-            </div>
-          </div> <!-- end of owner. Left part of the card -->
-          <div class="pet text-center">
-            <ul class="list-unstyled"><!--Pet infor. right part of the card -->
-              <% sitting.owner.pets.each do |pet| %>
-                <li>
-                  <div class="pet-name text-center">
-                    <%= pet.name %>
-                  </div><!--pet-name-->
-                  <div class="pet-image">
-                    <%# image_tag pet.photo, :alt => "pet_photo" %>
-                  </div><!-- pet-image-->
-                </li>
-              <% end %> <!-- end pet detail loop -->
-            </ul>
-            <div class="plus-pets">
-              <!-- HERE WE PLACE FONT AWESOME PLUS -->
-            </div><!-- plus-pets-->
-          </div><!-- pet-->
-          <div class="sitting-period">
-            <div class="sitting-title text-center">
-              <p>Sitting Period</p>
-            </div><!--sitting-title-->
-            <div class="sitting-dates text-center">
-              <p><%= "#{sitting.start_date} - #{sitting.end_date}" %></p>
+      <div class="col-xs-12 col-md-4">
+        <%= link_to sitting_path(sitting) do  %>
+          <div class="card" >
+            <div class="pet text-center">
+              <ul class="list-unstyled list-inline"><!--Pet infor. right part of the card -->
+                <% sitting.owner.pets.each do |pet| %>
+                  <li>
+                    <div class="pet-name text-center">
+                      <%= pet.name %>
+                    </div><!--pet-name-->
+                    <div class="pet-image">
+                      <% if sitting.owner.pets.count ==1 %>
+                        <%= cl_image_tag pet.photo, height: 190, width: 190, crop: :fill, :class => "image-class" %>
+                      <% elsif sitting.owner.pets.count ==2 %>
+                        <%= cl_image_tag pet.photo, height: 150, width: 150, crop: :fill, :class => "image-class" %>
+                      <% end %>
+                    </div><!-- pet-image-->
+                  </li>
+                <% end %> <!-- end pet detail loop -->
+              </ul>
+            </div><!-- pet-->
+            <div class="owner" >
+              <div class="owner-address text-center" >
+                <i class="fas fa-map-marker-alt"></i><br>
+                <%= sitting.owner.address.split(",").first %><br>
+                <strong><%= sitting.owner.address.split(",").last.capitalize %></strong>
+              </div>
+            </div> <!-- end of owner. Left part of the card -->
+            <div class="sitting-period text-center">
+              <i class="far fa-calendar-alt"></i>
+              <%= "#{sitting.start_date} - #{sitting.end_date}" %>
             </div><!--sitting-dates-->
-          </div><!--sitting-period-->
-        </div> <!-- end div card -->
+          </div> <!-- end div card -->
         <% end %>
-      </div><!--bootstrap grid-->
-    <% end %><!--end sitting loop-->
-  </div><!--row-->
-</div> <!-- container-->
-
+      </div>
+    <% end %>
+  </div><!--bootstrap grid-->
+</div><!--row-->
